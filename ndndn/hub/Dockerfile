@@ -1,6 +1,7 @@
-FROM peetonn/ndn-docker:latest
+FROM danome/ndn-docker:0.0.1
 LABEL maintainer "Peter Gusev <peter@remap.ucla.edu>"
 
+RUN apt-get update
 RUN apt-get install -y iptables dnsutils iputils-ping
 
 COPY bootstrap.sh /usr/bin
